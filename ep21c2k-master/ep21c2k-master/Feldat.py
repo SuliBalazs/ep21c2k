@@ -51,6 +51,7 @@ for line in fileobject:
         pontszam = pontszam + 5
 
         if(pontszam>segito):
+            segito=pontszam
             gyoztes=pontszam
             gyoztesindex=n
 
