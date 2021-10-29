@@ -10,7 +10,53 @@ print("kérem a versenyző kódját: ");
 versenykod = input(str())
 versenyindex = 0
 vane=False
+
+gyoztes=0
+segito=0
+pontszam=0
+gyoztesindex=0
 for line in fileobject:
+
+    #6/7-es feladatokhoz
+    if(megoldas[0]==line[0]):
+        pontszam=pontszam+3
+    if (megoldas[1] == line[1]):
+        pontszam = pontszam + 3
+    if (megoldas[2] == line[2]):
+        pontszam = pontszam + 3
+    if (megoldas[3] == line[3]):
+        pontszam = pontszam + 3
+    if (megoldas[4] == line[4]):
+        pontszam = pontszam + 3
+        # 4 pont
+    if (megoldas[5] == line[5]):
+        pontszam = pontszam + 4
+    if (megoldas[6] == line[6]):
+        pontszam = pontszam + 4
+    if (megoldas[7] == line[7]):
+        pontszam = pontszam + 4
+    if (megoldas[8] == line[8]):
+        pontszam = pontszam + 4
+    if (megoldas[9] == line[9]):
+        pontszam = pontszam + 4
+    if (megoldas[10] == line[10]):
+        pontszam = pontszam + 4
+        #5 pont
+    if (megoldas[11] == line[11]):
+        pontszam = pontszam + 5
+    if (megoldas[12] == line[12]):
+        pontszam = pontszam + 5
+        # 6
+    if (megoldas[13] == line[13]):
+        pontszam = pontszam + 5
+
+        if(pontszam>segito):
+            gyoztes=pontszam
+            gyoztesindex=n
+
+
+
+
     db=db+1
     if len(line) > max_length:
         n = line
@@ -167,7 +213,7 @@ atlag=(jomegold/db)*100
 
 for i in range(db):
 
-    if(megoldas[sorszam]==n[sorszam+5]):
+    if(megoldas[sorszam]==n[sorszam]):
        jomegold=jomegold+1
 
 
@@ -177,7 +223,7 @@ print("a versenyzők százaléka atlaga: ", atlag,"%")
 
 print("6. feladat")
 
-
+print("a győztes: ", gyoztesindex,"és a pontszáma:",gyoztes)
 
 
 
