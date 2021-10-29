@@ -16,7 +16,7 @@ segito=0
 pontszam=0
 gyoztesindex=0
 for line in fileobject:
-
+    pontszam=0
     #6/7-es feladatokhoz
     if(megoldas[0]==line[0]):
         pontszam=pontszam+3
